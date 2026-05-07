@@ -345,3 +345,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+let deadline = new Date();
+deadline.setDate(deadline.getDate() + 24);
+deadline.setHours(23, 59, 59);
+
+setInterval(() => {
+  let diff = deadline - new Date();
+
+  if (diff <= 0) {
+    document.getElementById("goldTimer").innerHTML = "ACTIVE NOW!";
+  } else {
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("goldTimer").innerHTML =
+      days +
+      "days" +
+      String(hours).padStart(2, "0") +
+      "hrs " +
+      String(minutes).padStart(2, "0") +
+      "min " +
+      String(seconds).padStart(2, "0") +
+      "sec";
+  }
+}, 1000);
