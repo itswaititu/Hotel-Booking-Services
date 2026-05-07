@@ -349,3 +349,11 @@ footer {
         width: 90%;
     }
 }
+#hotel {
+    background-image: url(/hotel2.jpeg);
+     background-color: #f5deb3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
