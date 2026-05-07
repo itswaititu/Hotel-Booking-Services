@@ -350,10 +350,21 @@ footer {
     }
 }
 #hotel {
-    background-image: url(/hotel2.jpeg);
+    background-image: url(/hotel3.jpeg);
      background-color: #f5deb3;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
+}
+#discount {
+    background: var(--deep-red);
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
 }
