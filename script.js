@@ -2,21 +2,21 @@ const hotelsData = [
   {
     id: 1,
     name: "Royal Onyx Suite",
-    price: 499,
+    price: 75000,
     image: "https://placehold.co/600x400/2a1a1a/d4af37?text=Royal+Onyx+Suite",
     amenities: ["Pool", "Spa", "Restaurant"],
   },
   {
     id: 2,
     name: "Crimson Palace",
-    price: 699,
+    price: 40000,
     image: "https://placehold.co/600x400/3a1a1a/f3e5ab?text=Crimson+Palace",
     amenities: ["Infinity Pool", "Butler", "Bar"],
   },
   {
     id: 3,
     name: "Golden Eclipse",
-    price: 899,
+    price: 25000,
     image: "https://placehold.co/600x400/1a2a1a/d4af37?text=Golden+Eclipse",
     amenities: ["Rooftop", "Cinema", "Gym"],
   },
@@ -34,21 +34,21 @@ const transportData = [
   {
     id: 1,
     name: "Luxury SUV(7-sitter)",
-    price: 799,
+    price: 75000,
     icon: "fa-shuttle-van",
     capacity: "7 guests",
   },
   {
     id: 2,
     name: "Luxury sedan(4-sitter",
-    price: 599,
+    price: 40000,
     icon: "fa-car-side",
     capacity: "4 guests",
   },
   {
     id: 3,
     name: "Luxury coupe(2-sitter)",
-    price: 399,
+    price: 25000,
     icon: "fa-car",
     capacity: "2 guests",
   },
@@ -172,7 +172,7 @@ function renderTransport() {
             </div>
             <div class="card-content">
                 <div class="card-title">${vehicle.name}</div>
-                <div class="price">$${vehicle.price} / ride</div>
+                <div class="price">ksh${vehicle.price} / ride</div>
                 <p><i class="fas fa-users"></i> ${vehicle.capacity}</p>
                 <button class="book-btn" data-type="transport" data-name=${vehicle.name}" data-price="${vehicle.price}">Book Ride →</button>
             </div>
@@ -198,7 +198,7 @@ function renderFeatured() {
             </div>
             <div class="card-content">
                 <div class="card-title">${hotel.name}</div>
-                <div class="price">$${hotel.price} / night</div>
+                <div class="price">ksh${hotel.price} / night</div>
                 <button class="book-btn" data-type="hotel" data-name="${hotel.name}" data-price="${hotel.price}">Book Now →</button>
             </div>
         </div>
@@ -225,7 +225,7 @@ function updateBookingList() {
       (booking) => `
         <div class="booking-item">
             <div>
-                <strong>${booking.name}</strong> - $${booking.price}<br>
+                <strong>${booking.name}</strong> - ksh${booking.price}<br>
                 <small>${booking.type} | ${booking.date}</small>
             </div>
             <button class="btn-small remove-item" data-id="${booking.id}">✖ Cancel</button>
@@ -257,7 +257,7 @@ function updateTransportBookingList() {
       (booking) => `
         <div class="booking-item">
             <div>
-                <strong>${booking.name}</strong> - $${booking.price}<br>
+                <strong>${booking.name}</strong> - ksh${booking.price}<br>
                 <small>${booking.pickup ? `${booking.pickup} → ${booking.dropoff}` : ""} | ${booking.date}</small>
             </div>
             <button class="btn-small remove-item" data-id="${booking.id}">✖ Cancel</button>
@@ -335,9 +335,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       let price = 0;
-      if (vehicle.includes("Mercedes")) price = 799;
-      else if (vehicle.includes("BMW")) price = 599;
-      else if (vehicle.includes("Range")) price = 399;
+      if (vehicle.includes("Luxury SUV")) price = 75000;
+      else if (vehicle.includes("Luxury sedan")) price = 40000;
+      else if (vehicle.includes("Luxury coupe")) price = 25000;
 
       addBooking("transport", vehicle, price, { pickup, dropoff, datetime });
       rideForm.reset();
