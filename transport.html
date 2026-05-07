@@ -12,7 +12,7 @@
 
     <nav class="navbar">
         <div class="logo">
-            <i class="fas fa-crown"></i> GoldenStay
+            <i class="fas fa-crown"></i> Premium transportation
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -28,10 +28,8 @@
 
     <div class="container">
         <div class="transport-grid" id="transportGrid">
-            <!-- Transport options loaded dynamically -->
         </div>
 
-        <!-- Custom Booking Form -->
         <div class="custom-booking-form">
             <h3><i class="fas fa-calendar-check"></i> Custom Ride Request</h3>
             <form id="rideForm">
@@ -39,16 +37,15 @@
                 <input type="text" id="dropoffLocation" placeholder="Destination" required>
                 <select id="vehicleSelect" required>
                     <option value="">Select vehicle</option>
-                    <option value="Mercedes S-Class">Mercedes S-Class (+$199)</option>
-                    <option value="BMW 7 Series">BMW 7 Series (+$179)</option>
-                    <option value="Range Rover">Range Rover (+$249)</option>
+                    <option value="Luxury SUV">Luxury SUV (ksh75,000)</option>
+                    <option value="Luxury sedan">Luxury sedan (ksh40,000)</option>
+                    <option value="Luxury coupes">Luxury coupes(2-sitter) (ksh25,000)</option>
                 </select>
                 <input type="datetime-local" id="rideDateTime" required>
                 <button type="submit" class="btn btn-primary btn-block">Reserve Ride →</button>
             </form>
         </div>
 
-        <!-- Transport Bookings Summary -->
         <div class="booking-summary">
             <h3><i class="fas fa-ticket-alt"></i> Your Ride Bookings</h3>
             <div id="transportBookingList">No rides booked yet.</div>
@@ -61,6 +58,6 @@
         <p><i class="fas fa-phone-alt"></i> 254 792188853 | <i class="fas fa-envelope"></i> goldville@hotelbookings.com</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
