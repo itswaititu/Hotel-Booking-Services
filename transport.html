@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goldville | Premium Transport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-crown"></i> GoldenStay
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="transport.html" class="active">Transport</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>🚗 <span class="gold-text">Premium Transport</span></h1>
+        <p>Ride in style with our luxury fleet</p>
+    </div>
+
+    <div class="container">
+        <div class="transport-grid" id="transportGrid">
+            <!-- Transport options loaded dynamically -->
+        </div>
+
+        <!-- Custom Booking Form -->
+        <div class="custom-booking-form">
+            <h3><i class="fas fa-calendar-check"></i> Custom Ride Request</h3>
+            <form id="rideForm">
+                <input type="text" id="pickupLocation" placeholder="Pick-up address" required>
+                <input type="text" id="dropoffLocation" placeholder="Destination" required>
+                <select id="vehicleSelect" required>
+                    <option value="">Select vehicle</option>
+                    <option value="Mercedes S-Class">Mercedes S-Class (+$199)</option>
+                    <option value="BMW 7 Series">BMW 7 Series (+$179)</option>
+                    <option value="Range Rover">Range Rover (+$249)</option>
+                </select>
+                <input type="datetime-local" id="rideDateTime" required>
+                <button type="submit" class="btn btn-primary btn-block">Reserve Ride →</button>
+            </form>
+        </div>
+
+        <!-- Transport Bookings Summary -->
+        <div class="booking-summary">
+            <h3><i class="fas fa-ticket-alt"></i> Your Ride Bookings</h3>
+            <div id="transportBookingList">No rides booked yet.</div>
+            <button id="clearTransportBtn" class="btn-small">Clear All Rides</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>✦ GoldenStay — Your Premier Travel Companion ✦</p>
+        <p><i class="fas fa-phone-alt"></i> 254 792188853 | <i class="fas fa-envelope"></i> goldville@hotelbookings.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
