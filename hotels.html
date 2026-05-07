@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldenStay | Luxury Hotels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>✦Hotels✦</header>
 
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-crown"></i> Best Deals
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hotels.html" class="active">Hotels</a></li>
+            <li><a href="transport.html">Transport</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>🏨 Our <span class="gold-text">Luxury Collection</span></h1>
+        <p>Handpicked hotels with stunning views and premium amenities</p>
+    </div>
+
+    <div class="container">
+        <div class="hotels-grid" id="hotelsGrid">
+            <!-- This Hotels are loaded using JavaScript -->
+        </div>
+
+        <div class="booking-summary">
+            <h3><i class="fas fa-suitcase-rolling"></i> Your Bookings</h3>
+            <div id="bookingList">No bookings yet. Click "Book Now" on any hotel.</div>
+            <button id="clearAllBtn" class="btn-small">Clear All</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>✦ GoldenStay — Your Premier Travel Companion ✦</p>
+        <p><i class="fas fa-phone-alt"></i> 254 792188853 | <i class="fas fa-envelope"></i> Goldville@gmail.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
