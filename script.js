@@ -1,4 +1,3 @@
-
 const hotelsData = [
   {
     id: 1,
@@ -34,24 +33,24 @@ const hotelsData = [
 const transportData = [
   {
     id: 1,
-    name: "Mercedes S-Class",
-    price: 199,
-    icon: "fa-car",
-    capacity: "3 guests",
+    name: "Luxury SUV(7-sitter)",
+    price: 799,
+    icon: "fa-shuttle-van",
+    capacity: "7 guests",
   },
   {
     id: 2,
-    name: "BMW 7 Series",
-    price: 179,
+    name: "Luxury sedan(4-sitter",
+    price: 599,
     icon: "fa-car-side",
-    capacity: "3 guests",
+    capacity: "4 guests",
   },
   {
     id: 3,
-    name: "Range Rover",
-    price: 249,
-    icon: "fa-truck",
-    capacity: "4 guests",
+    name: "Luxury coupe(2-sitter)",
+    price: 399,
+    icon: "fa-car",
+    capacity: "2 guests",
   },
 ];
 
@@ -175,7 +174,7 @@ function renderTransport() {
                 <div class="card-title">${vehicle.name}</div>
                 <div class="price">$${vehicle.price} / ride</div>
                 <p><i class="fas fa-users"></i> ${vehicle.capacity}</p>
-                <button class="book-btn" data-type="transport" data-name="${vehicle.name}" data-price="${vehicle.price}">Book Ride →</button>
+                <button class="book-btn" data-type="transport" data-name=${vehicle.name}" data-price="${vehicle.price}">Book Ride →</button>
             </div>
         </div>
     `,
@@ -336,9 +335,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       let price = 0;
-      if (vehicle.includes("Mercedes")) price = 199;
-      else if (vehicle.includes("BMW")) price = 179;
-      else if (vehicle.includes("Range")) price = 249;
+      if (vehicle.includes("Mercedes")) price = 799;
+      else if (vehicle.includes("BMW")) price = 599;
+      else if (vehicle.includes("Range")) price = 399;
 
       addBooking("transport", vehicle, price, { pickup, dropoff, datetime });
       rideForm.reset();
