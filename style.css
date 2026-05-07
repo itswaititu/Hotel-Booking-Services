@@ -39,12 +39,6 @@ body {
     z-index: 1000;
 }
 header {
-     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: black;
-    box-shadow: #141413;
 }
 .logoimg {
      display: block;

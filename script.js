@@ -194,7 +194,7 @@ function renderFeatured() {
     .map(
       (hotel) => `
         <div class="card">
-            <div class="card-img" style="background-image: url('${hotel.image}'); background-size: cover;">
+            <div class="card-img" style="background-image: url('${hotel1.jpeg}'); background-size: cover;">
                 <i class="fas fa-star" style="color:var(--gold);"></i>
             </div>
             <div class="card-content">
