@@ -145,7 +145,7 @@ function renderHotels() {
             </div>
             <div class="card-content">
                 <div class="card-title">${hotel.name}</div>
-                <div class="price">$${hotel.price} / night</div>
+                <div class="price">ksh${hotel.price} / night</div>
                 <div class="amenity-badge" style="display:flex; gap:8px; flex-wrap:wrap; margin:10px 0;">
                     ${hotel.amenities.map((a) => `<span style="background:#333; padding:2px 10px; border-radius:20px; font-size:0.7rem;">${a}</span>`).join("")}
                 </div>
