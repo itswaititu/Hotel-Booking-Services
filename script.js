@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 let deadline = new Date();
-deadline.setDate(deadline.getDate() + 24);
+deadline.setDate(deadline.getDate() + 20);
 deadline.setHours(23, 59, 59);
 
 setInterval(() => {
@@ -360,7 +360,7 @@ setInterval(() => {
     let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
     document.getElementById("goldTimer").innerHTML =
-      days +
+      String(days).padStart(2, "0") +
       "days" +
       String(hours).padStart(2, "0") +
       "hrs " +
